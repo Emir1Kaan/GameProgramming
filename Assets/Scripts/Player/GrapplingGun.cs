@@ -27,6 +27,8 @@ public class GrapplingGun : MonoBehaviour {
     public Transform camera;
     public Transform player;
 
+    public RaycastHit hit;
+
 
     
     
@@ -56,7 +58,6 @@ public class GrapplingGun : MonoBehaviour {
     /// Call whenever we want to start a grapple
     /// </summary>
     void StartGrapple() {
-        RaycastHit hit;
         if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, whatIsGrappleable)) {
             grapplePoint = hit.point;
             joint = player.gameObject.AddComponent<SpringJoint>();

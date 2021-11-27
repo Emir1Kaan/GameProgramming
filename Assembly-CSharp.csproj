@@ -36,12 +36,13 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Scripts\Player\FireGun.cs" />
-     <Compile Include="Assets\Scripts\Player\RotateGun.cs" />
-     <Compile Include="Assets\Scripts\Player\MoveCamera.cs" />
+     <Compile Include="Assets\Scripts\Player\FireGun\FireGun.cs" />
+     <Compile Include="Assets\Scripts\Player\FireGun\RotateGun.cs" />
+     <Compile Include="Assets\Scripts\Player\Movement\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\HUD\DEBUG\DEBUG_HUD.cs" />
-     <Compile Include="Assets\Scripts\Player\GrapplingGun.cs" />
-     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Player\FireGun\GrapplingGun.cs" />
+     <Compile Include="Assets\Scripts\Player\FireGun\Bullet.cs" />
+     <Compile Include="Assets\Scripts\Player\Movement\PlayerMovement.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.1.27f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

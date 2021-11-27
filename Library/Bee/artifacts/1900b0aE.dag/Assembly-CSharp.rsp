@@ -321,11 +321,12 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
 "Assets/Scripts/HUD/DEBUG/DEBUG_HUD.cs"
-"Assets/Scripts/Player/FireGun.cs"
-"Assets/Scripts/Player/GrapplingGun.cs"
-"Assets/Scripts/Player/MoveCamera.cs"
-"Assets/Scripts/Player/PlayerMovement.cs"
-"Assets/Scripts/Player/RotateGun.cs"
+"Assets/Scripts/Player/FireGun/Bullet.cs"
+"Assets/Scripts/Player/FireGun/FireGun.cs"
+"Assets/Scripts/Player/FireGun/GrapplingGun.cs"
+"Assets/Scripts/Player/FireGun/RotateGun.cs"
+"Assets/Scripts/Player/Movement/MoveCamera.cs"
+"Assets/Scripts/Player/Movement/PlayerMovement.cs"
 -langversion:8.0
 
 /deterministic

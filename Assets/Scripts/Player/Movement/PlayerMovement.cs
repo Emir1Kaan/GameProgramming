@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour {
     //Other
     public Rigidbody rb;
 
-    //Rotation and look
+    //Rotation and Look
     private float xRotation;
     private float sensitivity = 50f;
     private float sensMultiplier = 1f;
@@ -20,7 +20,7 @@ public class PlayerMovement : MonoBehaviour {
     //Movement
     public float moveSpeed = 4500;
     public float maxSpeed = 20;
-    public bool grounded;
+    [HideInInspector] public bool grounded;
     public LayerMask whatIsGround;
     
     public float counterMovement = 0.175f;
@@ -67,9 +67,9 @@ public class PlayerMovement : MonoBehaviour {
 
     }
 
-    /// <summary>
+    
     /// Find user input. Should put this in its own class but im lazy
-    /// </summary>
+    
     private void MyInput() {
         x = Input.GetAxisRaw("Horizontal");
         y = Input.GetAxisRaw("Vertical");
@@ -110,8 +110,10 @@ public class PlayerMovement : MonoBehaviour {
         CounterMovement(x, y, mag);
         
         //If holding jump && ready to jump, then jump
-        if (readyToJump && jumping) Jump();
-
+        if (readyToJump && jumping) 
+        {
+            Jump();
+        }
         //Set max speed
         float maxSpeed = this.maxSpeed;
         
@@ -185,6 +187,8 @@ public class PlayerMovement : MonoBehaviour {
         orientation.transform.localRotation = Quaternion.Euler(0, desiredX, 0);
     }
 
+
+
     private void CounterMovement(float x, float y, Vector2 mag) {
         if (!grounded || jumping) return;
 
@@ -210,11 +214,10 @@ public class PlayerMovement : MonoBehaviour {
         }
     }
 
-    /// <summary>
-    /// Find the velocity relative to where the player is looking
-    /// Useful for vectors calculations regarding movement and limiting movement
-    /// </summary>
-    /// <returns></returns>
+   
+    // Find the velocity relative to where the player is looking
+    // Useful for vectors calculations regarding movement and limiting movement
+ 
     public Vector2 FindVelRelativeToLook() {
         float lookAngle = orientation.transform.eulerAngles.y;
         float moveAngle = Mathf.Atan2(rb.velocity.x, rb.velocity.z) * Mathf.Rad2Deg;
@@ -236,11 +239,10 @@ public class PlayerMovement : MonoBehaviour {
 
     private bool cancellingGrounded;
     
-    /// <summary>
-    /// Handle ground detection
-    /// </summary>
+    /// Ground Detection
+    
     private void OnCollisionStay(Collision other) {
-        //Make sure we are only checking for walkable layers
+        //Checking for walkable layers
         int layer = other.gameObject.layer;
         if (whatIsGround != (whatIsGround | (1 << layer))) return;
 

@@ -6,8 +6,8 @@ public class FireGun : MonoBehaviour
 {
     // Start is called before the first frame update
     private RaycastHit hit;
-    [HideInInspector]public GameObject hitObject;
-    [HideInInspector]public Vector3 hitPoint;
+    [HideInInspector] public GameObject hitObject;
+    [HideInInspector] public Vector3 hitPoint;
     [SerializeField] float rayDistance = 100f;
     [SerializeField] float fireRate = 0.4f;
     [SerializeField] Camera camera;
@@ -17,11 +17,11 @@ public class FireGun : MonoBehaviour
 
 
     private float nextFire = 0.0f;
-    private bool fireCheck = true;
+
     // Update is called once per frame
     void Update()
     {
-        if(Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, rayDistance))
+        if (Physics.Raycast(camera.transform.position, camera.transform.forward, out hit, rayDistance))
         {
             hitObject = hit.transform.gameObject;
             hitPoint = hit.point;
@@ -39,7 +39,7 @@ public class FireGun : MonoBehaviour
 
     void fireGun()
     {
-        if(Input.GetMouseButton(1) && Time.time > nextFire)
+        if (Input.GetMouseButton(1) && Time.time > nextFire)
         {
             nextFire = Time.time + fireRate;
             createBullet();
@@ -51,5 +51,5 @@ public class FireGun : MonoBehaviour
         GameObject bullet;
         bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
     }
-    
+
 }

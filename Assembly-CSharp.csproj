@@ -40,6 +40,7 @@
      <Compile Include="Assets\Scripts\Player\FireGun\RotateGun.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\HUD\DEBUG\DEBUG_HUD.cs" />
+     <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Player\FireGun\GrapplingGun.cs" />
      <Compile Include="Assets\Scripts\Player\FireGun\Bullet.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerMovement.cs" />

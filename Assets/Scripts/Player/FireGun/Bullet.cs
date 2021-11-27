@@ -19,6 +19,7 @@ public class Bullet : MonoBehaviour
     private void OnTriggerEnter(Collider other) {
         if(other.tag == "Obstacle")
         {
+            Debug.Log("Bullet Hit : "+ other.gameObject.name);
             Destroy(gameObject);
         }
         

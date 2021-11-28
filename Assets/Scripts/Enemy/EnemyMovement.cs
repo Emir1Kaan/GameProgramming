@@ -7,6 +7,8 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] Transform player;
     [SerializeField] LayerMask whatIsGround, whatIsPlayer;
 
+    
+
 
     //Patrol
     [SerializeField] Vector3 walkPoint;
@@ -18,6 +20,7 @@ public class EnemyMovement : MonoBehaviour
     [SerializeField] GameObject bulletPrefab;
     bool alreadyAttacked;
 
+    
     //States 
     [SerializeField] float sightRange, attackRange;
     [SerializeField] float newSightRange, newAttackRange;
@@ -28,6 +31,7 @@ public class EnemyMovement : MonoBehaviour
     {
         player = GameObject.Find("Player").transform;
         agent = GetComponent<NavMeshAgent>();
+        ;
 
     }
 
@@ -41,7 +45,7 @@ public class EnemyMovement : MonoBehaviour
         if (playerInSightRange && !playerInAttackRange) ChasePlayer();
         if (playerInSightRange && playerInAttackRange) AttackPlayer();
 
-
+        
     }
     void Patroling()
     {

@@ -5,16 +5,21 @@ using UnityEngine;
 public class objectHealth : MonoBehaviour
 {
 
+    public GameObject popUp;
+    [SerializeField] Level level;
     [SerializeField] GameObject healthBox;
     [SerializeField] GameObject ammoBox;
 
     [SerializeField] Transform itemDropPos;
 
-    
+
     [SerializeField] float maxHealth = 100f;
-     public float currentHealth = 100f;
+    public float currentHealth = 100f;
     // Start is called before the first frame update
-    private void Start() {
+    private void Start()
+    {
+        
+        level = GameObject.Find("LEVEL STATS").GetComponent<Level>();
         currentHealth = maxHealth;
     }
     public void getDamage(float bulletDamage)
@@ -25,11 +30,18 @@ public class objectHealth : MonoBehaviour
             if (gameObject.tag != "Player")
             {
                 DropItem();
+                level.enemiesCount -= 1;
                 Destroy(gameObject);
+                if(level.enemiesCount==0)
+                {
+                    showPopUp(popUp);
+                }
+                
             }
             else
             {
                 PlayerDie();
+                showPopUp(popUp);
             }
         }
     }
@@ -66,13 +78,14 @@ public class objectHealth : MonoBehaviour
     {
         gameObject.GetComponent<PlayerMovement>().enabled = false;
         gameObject.transform.localScale = new Vector3(1, 0.5f, 1);
+        showPopUp(popUp);
         Debug.Log("player died");
     }
 
     public void getHeal()
     {
-        float heal = Random.Range(15,25);
-        if((currentHealth + heal)>=maxHealth)
+        float heal = Random.Range(15, 25);
+        if ((currentHealth + heal) >= maxHealth)
         {
             currentHealth = maxHealth;
         }
@@ -80,5 +93,17 @@ public class objectHealth : MonoBehaviour
         {
             currentHealth = currentHealth + heal;
         }
+    }
+
+    public void showPopUp(GameObject popUp)
+    {
+        popUp.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+    }
+
+    public void closePopUp(GameObject popUp)
+    {
+        popUp.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 }

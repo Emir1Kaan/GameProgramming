@@ -47,6 +47,7 @@
      <Compile Include="Assets\Scripts\Player\FireGun\GrapplingGun.cs" />
      <Compile Include="Assets\Scripts\Player\FireGun\Bullet.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerMovement.cs" />
+     <Compile Include="Assets\Scripts\Level.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.1.27f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

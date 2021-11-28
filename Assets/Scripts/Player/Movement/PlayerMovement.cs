@@ -8,9 +8,12 @@ public class PlayerMovement : MonoBehaviour {
     //Assingables
     public Transform playerCam;
     public Transform orientation;
+    [SerializeField] objectHealth objectHealth;
+    [SerializeField] GameObject popUp;
     
     //Other
     public Rigidbody rb;
+    
 
     //Rotation and Look
     private float xRotation;
@@ -64,6 +67,18 @@ public class PlayerMovement : MonoBehaviour {
     private void Update() {
         MyInput();
         Look();
+
+        if(Input.GetKeyDown(KeyCode.Escape))
+        {
+            if(objectHealth.popUp.active == true)
+            {
+                objectHealth.closePopUp(popUp);
+            }
+            else
+            {
+                objectHealth.showPopUp(popUp);
+            }
+        }
 
     }
 

@@ -2,7 +2,10 @@
 #HOOK AND SHOOT
 
 #Ekran Görüntüleri
-RESİMLER
+![image](https://user-images.githubusercontent.com/29103642/143787648-ea0be648-eddf-45af-9f1b-e29010d5e5f1.png)
+![image](https://user-images.githubusercontent.com/29103642/143787667-74729dcd-7fd0-49f4-86d0-2e3d1e03d6b8.png)
+![image](https://user-images.githubusercontent.com/29103642/143787622-55874d2b-53d1-410c-a9ab-068fa7736093.png)
+
 ## Tanıtım
 ►HOOK AND SHOOT, 3 boyutlu FPS oyunudur.
 - Ana karakterimizin amacı bölümdeki düşmanlarını öldürmek. 

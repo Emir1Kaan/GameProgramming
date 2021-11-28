@@ -18,7 +18,7 @@ public class objectHealth : MonoBehaviour
     // Start is called before the first frame update
     private void Start()
     {
-        
+
         level = GameObject.Find("LEVEL STATS").GetComponent<Level>();
         currentHealth = maxHealth;
     }
@@ -32,11 +32,11 @@ public class objectHealth : MonoBehaviour
                 DropItem();
                 level.enemiesCount -= 1;
                 Destroy(gameObject);
-                if(level.enemiesCount==0)
+                if (level.enemiesCount == 0)
                 {
                     showPopUp(popUp);
                 }
-                
+
             }
             else
             {

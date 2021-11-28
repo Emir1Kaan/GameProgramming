@@ -5,14 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class Level : MonoBehaviour
 {
-    
-    public int enemiesCount=0;
+
+    public int enemiesCount = 0;
     [SerializeField] GameObject[] enemies;
 
-   
+
     public bool playerFailCheck = false;
 
-    private void Awake() {
+    private void Awake()
+    {
         enemies = GameObject.FindGameObjectsWithTag("Enemy");
         enemiesCount = enemies.Length;
     }
@@ -31,5 +32,5 @@ public class Level : MonoBehaviour
     {
         SceneManager.LoadScene("Level1");
     }
-    
+
 }

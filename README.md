@@ -16,17 +16,17 @@
 ## Baslarken
  Nasıl oynanır?
  
--WASD - Move
+- WASD - Move
 
 - Space -Jump
 
--Left Control - Crouch
+- Left Control - Crouch
 
--Mouse Left - Hook
+- Mouse Left - Hook
 
--Mouse Right - Shoot
+- Mouse Right - Shoot
 
--R - Reload Gun
+- R - Reload Gun
 
 
 ## Projeyi Nasıl Çalıştırırım

@@ -11,7 +11,8 @@ public class RotateGun : MonoBehaviour {
         if (FireGun.hitObject == null) {
             desiredRotation = transform.parent.rotation;
         }
-        else {
+        else if(FireGun.hitObject != null && FireGun.hitObject.tag != "Player")
+        {
             desiredRotation = Quaternion.LookRotation(FireGun.hitPoint - transform.position);
         }
 

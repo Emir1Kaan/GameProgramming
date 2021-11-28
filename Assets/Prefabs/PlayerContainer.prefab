@@ -9,9 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 449080778}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GunHand Position
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -40,7 +40,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 479540313}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Grapple Robe Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -70,9 +70,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 904382917}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HookHand Position
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -106,9 +106,9 @@ GameObject:
   - component: {fileID: 1446828754}
   - component: {fileID: 1446828753}
   - component: {fileID: 1446828757}
-  m_Layer: 0
-  m_Name: GunHand
-  m_TagString: Untagged
+  m_Layer: 7
+  m_Name: Gun Hand
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -121,7 +121,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1446828751}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.78, y: -0.46, z: 1.11}
+  m_LocalPosition: {x: 0.78, y: -0.46, z: 1.09}
   m_LocalScale: {x: 0.15724282, y: 0.15724282, z: 0.47488907}
   m_Children:
   - {fileID: 1912821036}
@@ -220,9 +220,14 @@ MonoBehaviour:
   hitObject: {fileID: 0}
   hitPoint: {x: 0, y: 0, z: 0}
   rayDistance: 100
+  fireRate: 0.1
+  maxAmmo: 30
+  reloadTime: 0
+  currentAmmo: 50
+  currentGunAmmo: 0
   camera: {fileID: 190165604891282266}
   gunPoint: {fileID: 1912821036}
-  bulletPrefab: {fileID: 3031818481689019568, guid: 63fa0dcee34a23b459170a240de2d446, type: 3}
+  bulletPrefab: {fileID: 8279886013442955074, guid: 7a5d2ab628d3a2342a0d1352f42d07c4, type: 3}
 --- !u!1 &1912821035
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,9 +237,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1912821036}
-  m_Layer: 0
-  m_Name: FireGun Point
-  m_TagString: Untagged
+  m_Layer: 7
+  m_Name: Gun Hand Point
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -264,10 +269,9 @@ GameObject:
   - component: {fileID: 190165604211787015}
   - component: {fileID: 190165604211787032}
   - component: {fileID: 190165604211787033}
-  - component: {fileID: 190165604211787014}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Capsule
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -338,20 +342,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &190165604211787014
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 190165604211787012}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &190165604294262537
 GameObject:
   m_ObjectHideFlags: 0
@@ -361,9 +351,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 190165604294262536}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Orientation
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -393,9 +383,9 @@ GameObject:
   - component: {fileID: 190165604891282269}
   - component: {fileID: 190165604891282266}
   - component: {fileID: 190165604891282267}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Main Camera
-  m_TagString: MainCamera
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -477,9 +467,9 @@ GameObject:
   m_Component:
   - component: {fileID: 190165605538413259}
   - component: {fileID: 190165605538413256}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Camera
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -521,9 +511,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 190165605593749354}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Head
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -553,9 +543,11 @@ GameObject:
   - component: {fileID: 190165606072864016}
   - component: {fileID: 190165606072864018}
   - component: {fileID: 190165606072864019}
-  m_Layer: 0
+  - component: {fileID: 690975018}
+  - component: {fileID: 3050332388797834287}
+  m_Layer: 7
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -614,9 +606,41 @@ MonoBehaviour:
     m_Bits: 64
   counterMovement: 0.175
   maxSlopeAngle: 35
+  crouchScale: {x: 1, y: 0.5, z: 1}
   slideForce: 400
   slideCounterMovement: 0.2
   jumpForce: 550
+--- !u!114 &690975018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190165606072864017}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bb8c8418e89b0be4fb99e1f5f4c4be9e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthBox: {fileID: 0}
+  ammoBox: {fileID: 0}
+  itemDropPos: {fileID: 0}
+  maxHealth: 50000
+  currentHealth: 100
+--- !u!136 &3050332388797834287
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 190165606072864017}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1362764182851312443
 GameObject:
   m_ObjectHideFlags: 0
@@ -627,7 +651,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2542575726417336503}
   - component: {fileID: 190165604242810411}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PlayerContainer
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -715,7 +739,7 @@ GameObject:
   - component: {fileID: 3777951080603763296}
   - component: {fileID: 5363994745270661568}
   - component: {fileID: 1863055865}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: HookHand
   m_TagString: Untagged
   m_Icon: {fileID: 0}

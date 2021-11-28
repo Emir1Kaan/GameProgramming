@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.AI;
 public class EnemyMovement : MonoBehaviour
 {
+    public float enemyHealth = 100f;
     [SerializeField] NavMeshAgent agent;
     [SerializeField] Transform player;
     [SerializeField] LayerMask whatIsGround, whatIsPlayer;
@@ -19,6 +20,7 @@ public class EnemyMovement : MonoBehaviour
 
     //States 
     [SerializeField] float sightRange, attackRange;
+    [SerializeField] float newSightRange, newAttackRange;
     bool playerInSightRange, playerInAttackRange;
 
     float nextFire = 0.0f;
@@ -71,7 +73,8 @@ public class EnemyMovement : MonoBehaviour
     void ChasePlayer()
     {
         agent.SetDestination(player.position);
-
+        sightRange = newSightRange;
+        attackRange = newAttackRange;
     }
 
     void AttackPlayer()
@@ -94,4 +97,5 @@ public class EnemyMovement : MonoBehaviour
         bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
     }
 
+    
 }

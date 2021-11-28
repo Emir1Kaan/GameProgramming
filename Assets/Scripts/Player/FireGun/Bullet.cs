@@ -5,6 +5,8 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] float bulletSpeed;
+    [SerializeField] float bulletDamage = 10f;
+    [SerializeField] LayerMask hitLayer;
     
 
     private void Update() {
@@ -17,9 +19,15 @@ public class Bullet : MonoBehaviour
     }
 
     private void OnTriggerEnter(Collider other) {
-        if(other.tag == "Obstacle")
+       
+        if(hitLayer == (hitLayer | (1 << other.gameObject.layer)))
         {
             Debug.Log("Bullet Hit : "+ other.gameObject.name);
+            if(other.GetComponent<objectHealth>())
+            {
+                other.GetComponent<objectHealth>().getDamage(bulletDamage);
+                
+            }
             Destroy(gameObject);
         }
         

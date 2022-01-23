@@ -44,7 +44,7 @@
 - Bu oyun Bilgisayar Mühendisliği BLM0364 Oyun Programlama Dersi vizesi ve finali kapsamında geliştirilmiştir.
 
 ## Yararlanılan Kaynaklar
-Menü Müziği: God of the Dead (Hades Soundtrack)
-Seviyelerin Arkaplan Müziği: The Unseen Ones (Hades Soundtrack)
+- Menü Müziği: God of the Dead (Hades Soundtrack)
+- Seviyelerin Arkaplan Müziği: The Unseen Ones (Hades Soundtrack)
 
 ## Proje herhangi bir ticari anlam taşımamaktadır.

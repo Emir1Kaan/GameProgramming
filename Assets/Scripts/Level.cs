@@ -20,7 +20,7 @@ public class Level : MonoBehaviour
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene(0);
     }
 
     public void QuitGame()
@@ -30,7 +30,18 @@ public class Level : MonoBehaviour
 
     public void restartGame()
     {
-        SceneManager.LoadScene("Level1");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void StartGame()
+    {
+        SceneManager.LoadScene(1);        
+    }
+
+    public void resumeGame()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+        SceneManager.LoadScene(data.levelIndex);
     }
 
 }

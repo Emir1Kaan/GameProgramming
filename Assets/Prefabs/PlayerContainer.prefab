@@ -219,7 +219,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitObject: {fileID: 0}
   hitPoint: {x: 0, y: 0, z: 0}
-  rayDistance: 100
+  rayDistance: 300
   fireRate: 0.1
   maxAmmo: 30
   reloadTime: 0
@@ -597,7 +597,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCam: {fileID: 190165605538413259}
   orientation: {fileID: 190165604294262536}
+  objectHealth: {fileID: 690975018}
+  popUp: {fileID: 0}
   rb: {fileID: 0}
+  currentLevelIndex: 0
   moveSpeed: 4500
   maxSpeed: 20
   grounded: 0
@@ -622,10 +625,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bb8c8418e89b0be4fb99e1f5f4c4be9e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  popUp: {fileID: 0}
+  level: {fileID: 0}
   healthBox: {fileID: 0}
   ammoBox: {fileID: 0}
   itemDropPos: {fileID: 0}
-  maxHealth: 50000
+  maxHealth: 100
   currentHealth: 100
 --- !u!136 &3050332388797834287
 CapsuleCollider:

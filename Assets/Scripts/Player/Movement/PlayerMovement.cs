@@ -1,7 +1,6 @@
-// Some stupid rigidbody based movement by Dani
-
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour {
 
@@ -13,7 +12,7 @@ public class PlayerMovement : MonoBehaviour {
     
     //Other
     public Rigidbody rb;
-    
+    public int currentLevelIndex;
 
     //Rotation and Look
     private float xRotation;
@@ -57,6 +56,7 @@ public class PlayerMovement : MonoBehaviour {
         playerScale =  transform.localScale;
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        currentLevelIndex = SceneManager.GetActiveScene().buildIndex;
     }
 
     
@@ -279,4 +279,22 @@ public class PlayerMovement : MonoBehaviour {
         grounded = false;
     }
     
+
+    public void SavePlayer()
+    {
+        SaveSystem.SavePlayer(this);
+    }
+
+    public void LoadPlayer()
+    {
+        PlayerData data = SaveSystem.LoadPlayer();
+
+        currentLevelIndex = data.levelIndex;
+
+        Vector3 position;
+        position.x = data.position[0];
+        position.y = data.position[1];
+        position.z = data.position[2];
+        transform.position = position;
+    }
 }

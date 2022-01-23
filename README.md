@@ -41,4 +41,10 @@
 
 ## Kisisel Bilgiler ve Amaç
 - Canberk Bekiroğlu & Emir Kaan Ercan (@canberkbekir @Emir1Kaan)
-- Bu oyun Bilgisayar Mühendisliği BLM0364 Oyun Programlama Dersi vizesi kapsamında geliştirilmiştir.
+- Bu oyun Bilgisayar Mühendisliği BLM0364 Oyun Programlama Dersi vizesi ve finali kapsamında geliştirilmiştir.
+
+## Yararlanılan Kaynaklar
+Menü Müziği: God of the Dead (Hades Soundtrack)
+Seviyelerin Arkaplan Müziği: The Unseen Ones (Hades Soundtrack)
+
+## Proje herhangi bir ticari anlam taşımamaktadır.

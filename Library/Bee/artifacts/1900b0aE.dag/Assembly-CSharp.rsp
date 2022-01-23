@@ -320,6 +320,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/VSSettingsProvider.ref.dll"
+"Assets/Scenes/ForBGMusic.cs"
 "Assets/Scripts/Enemy/ammoBox.cs"
 "Assets/Scripts/Enemy/EnemyMovement.cs"
 "Assets/Scripts/Enemy/healthBox.cs"

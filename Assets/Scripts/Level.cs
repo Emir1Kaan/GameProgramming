@@ -18,6 +18,22 @@ public class Level : MonoBehaviour
         enemiesCount = enemies.Length;
     }
 
+
+    private void Update() {
+        if(enemiesCount == 0 && SceneManager.GetActiveScene().buildIndex != 2)
+        {
+            nextLevel();
+        }
+        else if(enemiesCount == 0 && SceneManager.GetActiveScene().buildIndex == 2)
+        {
+            MainMenu();
+        }
+    }
+
+    public void nextLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
+    }
     public void MainMenu()
     {
         SceneManager.LoadScene(0);

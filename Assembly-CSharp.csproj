@@ -42,14 +42,15 @@
      <Compile Include="Assets\Scripts\Player\FireGun\RotateGun.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\MoveCamera.cs" />
      <Compile Include="Assets\Scripts\objectHealth.cs" />
+     <Compile Include="Assets\Scripts\SaveSystem.cs" />
+     <Compile Include="Assets\Scripts\PlayerData.cs" />
      <Compile Include="Assets\Scripts\Level.cs" />
      <Compile Include="Assets\Scripts\HUD\DEBUG\DEBUG_HUD.cs" />
+     <Compile Include="Assets\Scenes\ForBGMusic.cs" />
      <Compile Include="Assets\Scripts\Enemy\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\Player\FireGun\GrapplingGun.cs" />
      <Compile Include="Assets\Scripts\Player\FireGun\Bullet.cs" />
      <Compile Include="Assets\Scripts\Player\Movement\PlayerMovement.cs" />
-     <Compile Include="Assets\Scripts\PlayerData.cs" />
-     <Compile Include="Assets\Scripts\SaveSystem.cs" />
     <Reference Include="UnityEngine">
         <HintPath>C:\Program Files\Unity\Hub\Editor\2021.1.27f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
     </Reference>

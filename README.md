@@ -47,4 +47,4 @@
 - Menü Müziği: God of the Dead (Hades Soundtrack)
 - Seviyelerin Arkaplan Müziği: The Unseen Ones (Hades Soundtrack)
 
-## Proje herhangi bir ticari anlam taşımamaktadır.
+### Proje herhangi bir ticari anlam taşımamaktadır.
